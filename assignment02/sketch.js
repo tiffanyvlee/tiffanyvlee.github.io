@@ -1,5 +1,3 @@
-var rotAngle = 45;
-
 function setup() {
   createCanvas (600, 600);
   background(255, 200, 220);
@@ -22,7 +20,7 @@ function draw() {
 
 
 function drawFlower(var i, var j) {
-
+var rotAngle = 45;
   push();
     translate(i, j);
     rotate(radians(rotAngle++));
