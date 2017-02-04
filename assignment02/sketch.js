@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas (600, 600);
+  createCanvas(600, 600);
   background(255, 200, 220);
 }
 
@@ -41,9 +41,9 @@ var rotAngle = 45;
     
       push();
         translate(10, 10);
-      rotate(radians(rotAngle++));
-      fill(200, 50, 255);
-      rect(10, 10, 30, 2);
+        rotate(radians(rotAngle++));
+        fill(200, 50, 255);
+        rect(10, 10, 30, 2);
 
       pop();
     pop();  
