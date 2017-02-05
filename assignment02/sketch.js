@@ -1,24 +1,25 @@
+var rotAngle = 45;
+
 function setup() {
   createCanvas(600, 600);
   background(255, 200, 220);
 }
 
 function draw() {
-  for (var i = 102; i < 600; i = i + 200) {
-    for (var j = 102; j < 600; j = j + 200) {
+  for (var i = 102; i < 600; i += 200) {
+    for (var j = 102; j < 600; j += 200) {
      drawFlower(i, j);
    }
   }
 
-  for (var k = 200; k < 600; k = k + 200) {
-    for (var l = 200; l < 600; l = l + 200) {
+  for (var k = 200; k < 600; k += 200) {
+    for (var l = 200; l < 600; l += 200) {
       drawFlower(k,l);
     }
   }  
 }
 
 function drawFlower(i, j) {
-var rotAngle = 45;
   push();
     translate(i, j);
     rotate(radians(rotAngle++));
