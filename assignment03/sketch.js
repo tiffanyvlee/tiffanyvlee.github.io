@@ -7,10 +7,13 @@ function circle(x, y) {
   this.x = x;
   this.y = y;
   this.col = color (map(mouseX, 0, 600, 0, 255));
+  this.col2 = color (map(mouseX, 0, 600, 255, 0));
 
   this.display = function() {
     noStroke();
     fill(this.col);
+    ellipse(this.x, this.y, 100, 30);
+    ellipse(this.x, this.y, 30, 100);
     ellipse(this.x, this.y, 50, 50);
   }
 
@@ -37,7 +40,7 @@ function setup() {
   slider.input(updateSize);
 
   canvas = createCanvas(600, 600);
-  bgcolor = color(200);
+  bgcolor = color(0);
 
   //canvas.mouseOver(changeColor);
 
