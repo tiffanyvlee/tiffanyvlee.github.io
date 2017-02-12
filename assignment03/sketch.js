@@ -14,7 +14,7 @@ function setup() {
   textbox.input(updateText);
   slider.input(updateSize);
 
-  createCanvas(600, 600);
+  canvas = createCanvas(600, 600);
   bgcolor = color(200);
 
   canvas.mouseOver(changeColor);
