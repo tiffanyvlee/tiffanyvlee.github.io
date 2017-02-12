@@ -15,8 +15,13 @@ function circle(x, y) {
   }
 
   this.move = function() {
-    this.x += random(-1, 1);
-    this.y += random(-1, 1);
+    if(x<=50 && y <=50) {
+         this.x += 3;
+      this.y += 3;
+    } else {
+      this.x += -1;
+      this.y += -1;
+    }
   }
 
   this.clicked = function() {
@@ -28,7 +33,7 @@ function setup() {
   paragraph = createP("text");
   textbox = createInput("enter");
   slider = createSlider("20, 30, 10");
-  button = createButton("push!");
+  button = createButton("change color");
   button.mousePressed(changeColor);
   createElement('br');
 
@@ -39,7 +44,7 @@ function setup() {
   canvas = createCanvas(600, 600);
   bgcolor = color(200);
 
-  canvas.mouseOver(changeColor);
+  //canvas.mouseOver(changeColor);
 
   for (var i = 0; i < 1; i++) {
     circles[i] = new circle(random(width), random(height));
