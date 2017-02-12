@@ -22,7 +22,8 @@ function setup() {
 
 function draw() {
   background(bgcolor);
-  rect(100, 100, 10, 10);
+  fill(map(mouseX, 0, 600, 0, 255));
+  rect(100, 100, 100, 100);
 }
 
 function updateText() {
