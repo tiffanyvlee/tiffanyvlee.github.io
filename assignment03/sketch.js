@@ -15,25 +15,20 @@ function circle(x, y) {
   }
 
   this.move = function() {
-    if(x<=50 && y <=50) {
-         this.x += 3;
-      this.y += 3;
-    } else {
-      this.x += -1;
-      this.y += -1;
-    }
+    this.x += random(-0.2, 0.2);
+    this.y += random(-0.2, 0.2);
   }
 
   this.clicked = function() {
-    this.col = color(0, 0, 255);
+    this.col = color(0);
   }
 }
 
 function setup() {
-  paragraph = createP("text");
-  textbox = createInput("enter");
+  paragraph = createP("hellooooo");
+  textbox = createInput("type here!");
   slider = createSlider("20, 30, 10");
-  button = createButton("change color");
+  button = createButton("change canvas color");
   button.mousePressed(changeColor);
   createElement('br');
 
@@ -54,7 +49,9 @@ function setup() {
 function draw() {
   background(bgcolor);
   fill(map(mouseX, 0, 600, 0, 255));
-  ellipse(100, 100, 100, 100);
+  ellipse(300, 300, 100, 100);
+  fill(map(mouseX, 0, 600, 255, 0));
+  rect(0, 500, 600, 100);
 
   for (var i = 0; i < circles.length; i++) {
     circles[i].display();
@@ -67,7 +64,7 @@ function draw() {
 
 function mousePressed() {
   for (var i = 0; i < circles.length; i++) {
-    if (dist(mouseX, mouseY, circles[i].x, circles[i].y) < 20) {
+    if (dist(mouseX, mouseY, circles[i].x, circles[i].y) < 50) {
       circles[i].clicked();
     }
   }
