@@ -47,10 +47,7 @@ function setup() {
 
   //canvas.mouseOver(changeColor);
 
-  for (var i = 0; i < 1; i++) {
-    circles[i] = new circle(random(width), random(height));
-  }
-}
+  
 
 function draw() {
   background(bgcolor);
@@ -89,6 +86,7 @@ function updateSize() {
 function changeColor() {
   bgcolor = color(random(255));
 }
+
 
 
 
