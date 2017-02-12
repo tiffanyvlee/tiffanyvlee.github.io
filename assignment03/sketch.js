@@ -1,7 +1,7 @@
 var textbox;
 var slider;
 var paragraph;
-var circles;
+var circles=[];
 
 function circle(x, y) {
   this.x = x;
