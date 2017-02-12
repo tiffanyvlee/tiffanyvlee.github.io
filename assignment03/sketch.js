@@ -34,8 +34,6 @@ function setup() {
   slider = createSlider("20, 30, 10");
   button = createButton("change border color");
   button.mousePressed(changeColor);
-  button = createButton("create a lil' guy");
-  button.mousePressed(mousePressed);
   createElement('br');
 
   textbox.changed(updateText);
@@ -47,7 +45,10 @@ function setup() {
 
   //canvas.mouseOver(changeColor);
 
-  
+  for (var i = 0; i < 1; i++) {
+    circles[i] = new circle(random(width), random(height));
+  }
+}
 
 function draw() {
   background(bgcolor);
@@ -86,7 +87,6 @@ function updateSize() {
 function changeColor() {
   bgcolor = color(random(255));
 }
-
 
 
 
