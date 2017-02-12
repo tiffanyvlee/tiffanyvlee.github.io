@@ -42,7 +42,7 @@ function setup() {
   canvas.mouseOver(changeColor);
 
   for (var i = 0; i < 1; i++) {
-    circles[i] = new circle(300, 300);
+    circles[i] = new circle(random(width), random(height));
   }
 }
 
