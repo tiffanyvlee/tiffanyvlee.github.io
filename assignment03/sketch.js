@@ -14,6 +14,7 @@ function circle(x, y) {
     fill(this.col);
     ellipse(this.x, this.y, 100, 30);
     ellipse(this.x, this.y, 30, 100);
+    fill(this.col2);
     ellipse(this.x, this.y, 50, 50);
   }
 
@@ -31,8 +32,10 @@ function setup() {
   paragraph = createP("hellooooo");
   textbox = createInput("type here!");
   slider = createSlider("20, 30, 10");
-  button = createButton("change canvas color");
+  button = createButton("change border color");
   button.mousePressed(changeColor);
+  button = createButton("create a lil' guy");
+  button.mousePressed(mousePressed);
   createElement('br');
 
   textbox.changed(updateText);
@@ -52,9 +55,7 @@ function setup() {
 function draw() {
   background(bgcolor);
   fill(map(mouseX, 0, 600, 0, 255));
-  ellipse(300, 300, 100, 100);
-  fill(map(mouseX, 0, 600, 255, 0));
-  rect(0, 500, 600, 100);
+  rect(100, 100, 400, 400);
 
   for (var i = 0; i < circles.length; i++) {
     circles[i].display();
