@@ -1,0 +1,17 @@
+
+{
+	"name": "Change Background Color",
+	"description": "Change background color to yellow light/dark light for ease on eyes during the night",
+	"version": "1.0",
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"browser_action": {
+		"default_title": "Change Background Color",
+		"default_icon": "eye.png",
+		"default_popup": "popup.html"
+	},
+	"manifest_version": 2
+}
