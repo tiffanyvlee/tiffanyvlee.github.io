@@ -1,0 +1,57 @@
+body{
+	padding-bottom:50px;
+	font-family: "HelveticaNeue-Light";
+}
+
+h1{
+	font-weight:normal;
+	font-size:44px;
+	text-align:center;
+}
+h2{
+	font-weight:normal;
+}
+h3{
+	padding-left:10%;
+	font-weight:normal;
+	font-size:20px;
+}
+h4{
+	padding-left:10%;
+}
+
+#list {
+ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background:rgb(0,0,0);
+}
+
+li{
+	float:left;
+}
+
+li a{
+	display:block;
+	color:white;
+	text-align:center;
+	padding:7px;
+	text-decoration: none;
+	font-size:13px;
+}
+li a:hover{
+	background-color: rgb(230, 60, 65);
+}
+}
+
+.text {;
+	text-align:center;
+}
+
+.assignments {
+	margin:10px;
+	padding:50px;
+	font-size:14px;
+}
